@@ -1,0 +1,16 @@
+# Example RC file for server.py
+# Each line is a command that will be executed in order when agent connects
+# Lines starting with # are comments and will be ignored
+
+# Get current working directory
+pwd
+
+# Download /etc/passwd for analysis
+download /etc/passwd
+
+# List the /var/log directory to see what logs are available
+ls /var/log
+
+# Tail the syslog file continuously (will run until interrupted or agent disconnects)
+# Note: This will block - remove this line if you want the RC to complete and enter interactive mode
+tailf /var/log/syslog
